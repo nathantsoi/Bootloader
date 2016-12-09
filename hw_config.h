@@ -582,6 +582,48 @@
 # define USBMFGSTRING                   "Bitcraze AB"
 
 /****************************************************************************
+ * TARGET_HW_REVOLUTION
+ ****************************************************************************/
+
+#elif  defined(TARGET_HW_REVOLUTION)
+
+# define APP_LOAD_ADDRESS               0x08004000
+# define BOOTLOADER_DELAY               5000
+# define BOARD_REVOLUTION
+# define INTERFACE_USB                  1
+# define INTERFACE_USART                1
+# define USBDEVICESTRING                "PX4 BL REVOLUTION"
+# define USBPRODUCTID                   0x0017
+
+# define BOARD_TYPE                     13
+# define BOARD_FLASH_SECTORS            11
+# define BOARD_FLASH_SIZE               (1024 * 1024)
+
+# define OSC_FREQ                       8
+
+# define BOARD_PIN_LED_ACTIVITY         GPIO5
+# define BOARD_PIN_LED_BOOTLOADER       GPIO4
+# define BOARD_PORT_LEDS                GPIOB
+# define BOARD_CLOCK_LEDS               RCC_AHB1ENR_IOPCEN
+# define BOARD_LED_ON                   gpio_clear
+# define BOARD_LED_OFF                  gpio_set
+
+//# define BOARD_USB_VBUS_SENSE_DISABLED
+
+# define BOARD_USART  					USART1
+# define BOARD_USART_CLOCK_REGISTER 	RCC_APB2ENR
+# define BOARD_USART_CLOCK_BIT      	RCC_APB2ENR_USART1EN
+
+# define BOARD_PORT_USART   			GPIOA
+# define BOARD_PORT_USART_AF 			GPIO_AF7
+# define BOARD_PIN_TX     				GPIO9
+# define BOARD_PIN_RX		     		GPIO10
+# define BOARD_USART_PIN_CLOCK_REGISTER RCC_AHB1ENR
+# define BOARD_USART_PIN_CLOCK_BIT  	RCC_AHB1ENR_IOPBEN
+
+# define USBMFGSTRING                   "OpenPilot Revolution"
+
+/****************************************************************************
  * TARGET_HW_AUAV_X2V1
  ****************************************************************************/
 
